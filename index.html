@@ -15,7 +15,201 @@
     <!-- bootstrap links -->
 
 </head>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Anek Malayalam', sans-serif;
+}
+.main-content{
+    width: 100%;
+    height: 100vh;
+    background-color: #a9a9a947;
+}
+/* navbar */
+#navbar-color{
+    background-color: white;
+    box-shadow: 0px -11px 4px 10px black;
+}
+#logo {
+    font-size: 25px;
+    color: black;
+    text-shadow: 1px 1px 1px black;
+}
+#logo img{
+    margin-bottom: 10px;
+}
+#logo span{
+    color: #0ea10e;
+}
+.navbar-nav{
+    margin-left: 100px;
+}
+.nav-link{
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 10px;
+    transition: 0.6s ease;
+}
+.nav-link:hover{
+    background-color: #0ea10e;
+    color: white;
+    border-radius: 5px;
+}
+#btn a{
+    text-decoration: none;
+}
+#btn button{
+    width: 120px;
+    height: 30px;
+    font-size: 16px;
+    color: #0ea10e;
+    border: 2px solid #0ea10e;
+    background: transparent;
+    border-radius: 5px;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+#btn button:hover{
+    background-color: #0ea10e;
+    color: white;
+}
+@media screen and (max-width:1000px){
+    .navbar-nav{
+        margin-left: 10px;
+    }
+}
+@media screen and (max-width:1338px){
+    #btn{
+        margin-right: 50px;
+        
+    }
+    #btn button{
+        width: 90px;
+        height: 25px;
+        font-size: 15px;
+    }
+    .nav-link{
+        font-size: 14px;
+    }
+  
+}
+/* navbar */
+
+/*Home Section*/
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 0;
+}
+.home .img{
+    flex: 1 1 400px;
+}
+.home .img img{
+    width: 90%;
+}
+.home .content{
+    flex:1 1 400px;
+}
+.content h3{
+    margin-left: 130px;
+    font-size: 60px;
+    text-shadow: 1px 1px 1px black;
+}
+.content p{
+    margin-left: 130px;
+}
+.content .btn{
+    margin-left: 130px;
+    width: 100px;
+    height: 35px;
+    background-color: #0ea10e;
+    color: white;
+}
+@media screen and (max-width:800px){
+    .content h3{
+        margin-left: 50px;
+        font-size: 40px;
+    }
+    .content p{
+        margin-left: 50px;
+    }
+    .content .btn{
+        margin-left: 50px;
+    }
+}
+@media screen and (max-width:570px){
+    .content h3{
+        margin-left: 20px;
+    }
+    .content p{
+        margin-left: 20px;
+    }
+    .content .btn{
+        margin-left: 20px;
+    }
+}
+
+/* home section */
+
+/* dishes content */
+#dishe h1{
+    margin-top: 50px;
+    text-shadow: 1px 1px 1px black;
+    border-bottom: 2px solid #0ea10e;
+}
+
+/* Make the row a flex container to align cards height */
+#dishe > .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Make all cards take full height of their column */
+#dishe .col-md-3 {
+    display: flex;
+    flex-direction: column;
+}
+
+#dishe .card{
+    box-shadow: 0 0  4px black;
+    cursor: pointer;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Make card body take remaining space so cards have equal height */
+#dishe .card .card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.checked{
+    color: rgba(255,230,0);
+    font-size: 15px;
+}
+#dishe h6{
+    margin-top: 20px;
+}
+#dishe h6 span{
+    float: right;
+    cursor: pointer;
+}
+/* dishes content */
+</style>
 <body>
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
     <!--Navbar start!-->
 
     <div class="main-content"  data-aos="fade-down"
@@ -37,29 +231,29 @@
           
             <!-- Navbar links -->
             <div class="collapse navbar-collapse" id="collapsibleNavbar" >
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Dishes</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Menu</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Chefs</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Gallary</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Contact</a>
-                </li>
-              </ul>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#dishe">Dishes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#menu">Menu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#chefs">Chefs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#gallary">Gallary</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+            </ul>
             </div>
 
             <div id="btn"><a href="#"><button>Book Now</button></a></div>
@@ -71,24 +265,45 @@
 
           <!-- navbar end -->
 
-          <!-- home section -->
-          <section class="home" id="home" >
+<!-- home section -->
+<section class="home" id="home" >
 
-            <div class="content">
-                <h3>Enjoy Your Spicy Chat
-                    <br>With Some Extra Tadka
-                </h3>
-                <p>"Spice up your cravings with every bite!"
-                    <br>  "Taste the fire, love the spice!"
-                </p>
-                <a href="#" class="btn">Order Now</a>
-                
-            </div>
-            <div class="img">
-                <img src="./images/b.jpeg" alt="">
-            </div>
-          </section>
-          <!-- home section -->
+  <div class="content">
+      <h3>Enjoy Your Spicy Chat
+          <br>With Some Extra Tadka
+      </h3>
+      <p>"Spice up your cravings with every bite!"
+          <br>  "Taste the fire, love the spice!"
+      </p>
+      <a href="#" class="btn">Order Now</a>
+      
+  </div>
+  <div class="img">
+      <img src="./images/b.jpeg" alt="">
+  </div>
+</section>
+<!-- home section -->
+
+<!-- about section -->
+<section id="about" class="about-section" style="padding: 50px 20px; background-color: #f8f9fa;">
+  <div class="container">
+    <h2 class="text-center mb-4" style="color: #0ea10e;">About Us</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <p style="font-size: 18px; line-height: 1.6;">
+          Welcome to Spicy Delights, your ultimate destination for authentic and flavorful spicy snacks and dishes. We bring you the best of traditional recipes with a modern twist, crafted with love and the freshest ingredients.
+        </p>
+        <p style="font-size: 18px; line-height: 1.6;">
+          Our mission is to spice up your cravings and deliver an unforgettable taste experience that keeps you coming back for more.
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img src="./images/bhel puri.jpg" alt="About Spicy Delights" style="width: 100%; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+      </div>
+    </div>
+  </div>
+</section>
+<!-- about section -->
 
 <!--Dishes -->
           <div class="container" id="dishe" data-aos="fade-up"
@@ -325,6 +540,92 @@ data-aos-duration="1500">
     </div>
 </div>
 <!-- menu section -->
+
+<!-- chefs section -->
+<section id="chefs" class="chefs-section" style="padding: 50px 20px; background-color: #fff;">
+  <div class="container">
+    <h2 class="text-center mb-4" style="color: #0ea10e;">Our Chefs</h2>
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <img src="./images/chef1.jpg" alt="Chef 1" style="width: 100%; border-radius: 50%; max-width: 200px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+        <h4 class="mt-3">Chef A</h4>
+        <p>Expert in spicy street food.</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <img src="./images/chef2.jpg" alt="Chef 2" style="width: 100%; border-radius: 50%; max-width: 200px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+        <h4 class="mt-3">Chef B</h4>
+        <p>Master of traditional recipes.</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <img src="./images/chef3.jpg" alt="Chef 3" style="width: 100%; border-radius: 50%; max-width: 200px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+        <h4 class="mt-3">Chef C</h4>
+        <p>Innovator of fusion flavors.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- chefs section -->
+
+<!-- gallary section -->
+<section id="gallary" class="gallary-section" style="padding: 50px 20px; background-color: #f8f9fa;">
+  <div class="container">
+    <h2 class="text-center mb-4" style="color: #0ea10e;">Gallery</h2>
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <img src="./images/bhel puri.jpg" alt="Gallery Image 1" style="width: 100%; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+      </div>
+      <div class="col-md-4 mb-3">
+        <img src="./images/panipuri.jpg" alt="Gallery Image 2" style="width: 100%; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+      </div>
+      <div class="col-md-4 mb-3">
+        <img src="./images/samosa.jpg" alt="Gallery Image 3" style="width: 100%; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+      </div>
+    </div>
+  </div>
+</section>
+<!-- gallary section -->
+
+<!-- contact section -->
+<section id="contact" class="contact-section" style="padding: 50px 20px; background-color: #fff;">
+  <div class="container">
+    <h2 class="text-center mb-4" style="color: #0ea10e;">Contact Us</h2>
+    <form>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+      </div>
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea class="form-control" id="message" rows="4" placeholder="Enter your message"></textarea>
+      </div>
+      <button type="submit" class="btn btn-success">Send</button>
+    </form>
+  </div>
+</section>
+<!-- contact section -->
     
+<script>
+  function setEqualHeight() {
+    const cards = document.querySelectorAll('#dishe .card');
+    let maxHeight = 0;
+    cards.forEach(card => {
+      card.style.height = 'auto'; // reset height
+      const cardHeight = card.offsetHeight;
+      if (cardHeight > maxHeight) {
+        maxHeight = cardHeight;
+      }
+    });
+    cards.forEach(card => {
+      card.style.height = maxHeight + 'px';
+    });
+  }
+
+  window.addEventListener('load', setEqualHeight);
+  window.addEventListener('resize', setEqualHeight);
+</script>
 </body>
 </html>
